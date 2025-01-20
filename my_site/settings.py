@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': getenv('DBNAME','blog_post_app_prsnl'),
-        'USER': getenv('USER','blog_post_app_prsnl_user'),
+        'NAME': getenv('dbname','blog_post_app_prsnl'),
+        'USER': getenv('user','blog_post_app_prsnl_user'),
         'PASSWORD': getenv('PASSWORD'),
-        'HOST': getenv('HOST','dpg-cu79hurv2p9s73beoedg-a.singapore-postgres.render.com'),
-        'PORT': getenv('PORT','5432')
+        'HOST': getenv('host','dpg-cu79hurv2p9s73beoedg-a.singapore-postgres.render.com'),
+        'PORT': getenv('port','5432')
     }
 }
 
