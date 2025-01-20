@@ -131,7 +131,7 @@ USE_TZ = True
 
 
 
-print("Not DEBUG:", not DEBUG)
+print("DEBUG:", DEBUG)
 if not DEBUG:
     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
