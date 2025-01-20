@@ -132,7 +132,7 @@ USE_TZ = True
 
 
 print("DEBUG:", DEBUG is False)
-print("DEBUG TYPE" : type(DEBUG))
+print("DEBUG TYPE", type(DEBUG))
 if DEBUG is False:
     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
