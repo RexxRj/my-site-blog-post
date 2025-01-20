@@ -40,6 +40,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 INSTALLED_APPS = [
     'blog',
+    'github_storages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -88,11 +89,11 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': getenv('dbname','blog_post_app_prsnl'),
-        'USER': getenv('user','blog_post_app_prsnl_user'),
-        'PASSWORD': getenv('password'),
-        'HOST': getenv('host','dpg-cu79hurv2p9s73beoedg-a.singapore-postgres.render.com'),
-        'PORT': getenv('port','5432')
+        'NAME': getenv('DBNAME','blog_post_app_prsnl'),
+        'USER': getenv('USER','blog_post_app_prsnl_user'),
+        'PASSWORD': getenv('PASSWORD'),
+        'HOST': getenv('HOST','dpg-cu79hurv2p9s73beoedg-a.singapore-postgres.render.com'),
+        'PORT': getenv('PORT','5432')
     }
 }
 
@@ -158,3 +159,9 @@ STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
 MEDIA_ROOT = BASE_DIR / 'uploads'
 MEDIA_URL = '/files/'
+
+DEFAULT_FILE_STORAGE = 'github_storages.backend.BackendStorages'
+GITHUB_HANDLE = 'RexxRj'
+GITHUB_REPO_NAME = 'my-site-blog-post'
+ACCESS_TOKEN = getenv('GITHUB_TOKEN')
+MEDIA_BUCKET_NAME = 'uploads/github_posts'
