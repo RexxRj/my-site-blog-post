@@ -143,7 +143,9 @@ if DEBUG:
     # and renames the files with unique names for each version to support long-term caching
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     STORAGES = {
-        # …
+         "default": {
+        "BACKEND": "github_storages.backend.BackendStorages",
+    },
         'staticfiles': {
         'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
         },
@@ -158,8 +160,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
-MEDIA_ROOT = BASE_DIR / 'uploads'
-MEDIA_URL = '/files/'
+#MEDIA_ROOT = BASE_DIR / 'uploads'
+#MEDIA_URL = '/files/'
 
 DEFAULT_FILE_STORAGE = 'github_storages.backend.BackendStorages'
 GITHUB_HANDLE = 'RexxRj'
