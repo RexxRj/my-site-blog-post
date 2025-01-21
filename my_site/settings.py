@@ -14,6 +14,7 @@ from pathlib import Path
 from os import getenv
 import dj_database_url
 import os
+import django
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
 
