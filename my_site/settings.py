@@ -14,7 +14,8 @@ from pathlib import Path
 from os import getenv
 import dj_database_url
 import os
-from django.utils.encoding import force_str as force_text
+from django.utils.encoding import force_text
+django.utils.encoding.force_text = force_str
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
