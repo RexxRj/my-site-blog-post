@@ -170,4 +170,4 @@ DEFAULT_FILE_STORAGE = 'github_storages.backend.BackendStorages'
 GITHUB_HANDLE = 'RexxRj'
 GITHUB_REPO_NAME = 'github-storage-s3'
 ACCESS_TOKEN = getenv('GITHUB_TOKEN')
-MEDIA_BUCKET_NAME = ''
+MEDIA_BUCKET_NAME = 'images'
