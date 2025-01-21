@@ -165,6 +165,6 @@ STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
 DEFAULT_FILE_STORAGE = 'github_storages.backend.BackendStorages'
 GITHUB_HANDLE = 'RexxRj'
-GITHUB_REPO_NAME = 'my-site-blog-post'
+GITHUB_REPO_NAME = 'github-storage-s3'
 ACCESS_TOKEN = getenv('GITHUB_TOKEN')
-MEDIA_BUCKET_NAME = 'uploads/github_posts'
+MEDIA_BUCKET_NAME = ''
